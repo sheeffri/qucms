@@ -1,0 +1,20 @@
+{
+    "minimum-stability": "beta",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/HackerWins/summernote/"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*",
+        "fortawesome/font-awesome": "*",
+        "yiisoft/yii2-jui": "*",
+        "yiisoft/yii2-gii": "*",
+        "components/angular.js": "*",
+        "HackerWins/summernote": "0.5.2"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "*"
+    }
+}
