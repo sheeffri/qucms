@@ -8,7 +8,7 @@
             <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
                 <img src="/img/male.png" alt="me" class="online" /> 
                 <span>
-                    its me 
+                    Иван Стрельцов
                 </span>
                 <i class="fa fa-angle-down"></i>
             </a> 
@@ -33,10 +33,14 @@
             foreach ($page_nav as $nav_item) {
                 //process parent nav
                 $nav_htm = '';
+                
+
                 $url = isset($nav_item["url"]) ? $nav_item["url"] : "#";
+               
+                
                 $url_target = isset($nav_item["url_target"]) ? 'target="' . $nav_item["url_target"] . '"' : "";
                 $icon_badge = isset($nav_item["icon_badge"]) ? '<em>' . $nav_item["icon_badge"] . '</em>' : '';
-                $icon = isset($nav_item["icon"]) ? \siasoft\fontawesome\IconHelper::icon($nav_item["icon"]) : "";
+                $icon = isset($nav_item["icon"]) ? \siasoft\fontawesome\IconHelper::icon($nav_item["icon"], ['fixedWidth' => true, 'size' => 1, 'badge' => $nav_item["icon_badge"]]) : "";
                 $nav_title = isset($nav_item["title"]) ? $nav_item["title"] : "(No Name)";
                 $label_htm = isset($nav_item["label_htm"]) ? $nav_item["label_htm"] : "";
                 $nav_htm .= '<a href="' . $url . '" ' . $url_target . ' title="' . $nav_title . '">' . $icon . ' <span class="menu-item-parent">' . $nav_title . '</span>' . $label_htm . '</a>';
@@ -45,11 +49,10 @@
                     $nav_htm .= process_sub_nav($nav_item["sub"]);
                 }
 
-                echo '<li ' . (isset($nav_item["active"]) ? 'class = "active"' : '') . '>' . $nav_htm . '</li>';
+                echo '<li ' . (($nav_item["active"] === true) ? 'class = "active"' : '') . '>' . $nav_htm . '</li>';
             }
 
-            function process_sub_nav($nav_item)
-            {
+            function process_sub_nav($nav_item) {
                 $sub_item_htm = "";
                 if (isset($nav_item["sub"]) && $nav_item["sub"]) {
                     $sub_nav_item = $nav_item["sub"];
@@ -63,7 +66,7 @@
                         $nav_title = isset($sub_item["title"]) ? $sub_item["title"] : "(No Name)";
                         $label_htm = isset($sub_item["label_htm"]) ? $sub_item["label_htm"] : "";
                         $sub_item_htm .=
-                                '<li ' . (isset($sub_item["active"]) ? 'class = "active"' : '') . '>
+                                '<li ' . (($sub_item["active"] == true) ? 'class = "active"' : '') . '>
 											<a href="' . \yii\helpers\Url::to($url) . '" ' . $url_target . '>' . $icon . ' ' . $nav_title . $label_htm . '</a>
 											' . (isset($sub_item["sub"]) ? process_sub_nav($sub_item["sub"]) : '') . '
 										</li>';
