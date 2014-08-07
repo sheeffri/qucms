@@ -11,7 +11,10 @@ return [
             'class' => 'yii\rbac\DbManager',
         ],
         'urlManager' => [
-            'enablePrettyUrl' => true
+            'enablePrettyUrl' => true,
+            'rules' => [
+                'list/<listName\w+>' => 'list/index'
+            ]
         ],
     ]
 ];
