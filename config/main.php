@@ -13,7 +13,7 @@ return [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'rules' => [
-                'list/<listName\w+>' => 'list/index'
+                'list/<listName:[a-z\-]+>' => 'list/index'
             ]
         ],
     ]

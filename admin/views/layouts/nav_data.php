@@ -42,6 +42,7 @@ return array(
             ],
             
         ],
+        "active" => false,
         'icon' => 'building',
 //        'active' => (strpos(Yii::$app->request->url,'real-estate') !== 0) ? true : false,
     ],
@@ -60,18 +61,21 @@ return array(
                 'active' => (Yii::$app->request->url === '/contractor') ? true : false,
                 'icon' => 'fa-users',]
         ],
+        "active" => false,
         'icon' => 'group',
     ],
     "tasks" => [
         "title" => "Календарь задач !",
         "url" => "/tasks",
         'icon' => 'calendar',
+        "active" => false
     ],
     "messages" => [
         "title" => "Сообщения !",
         "url" => "/messages",
         'icon' => 'comment ',
-        'icon_badge' => 5,
+        "active" => false
+        //'icon_badge' => 5,
     ],
     "userPermissions" => [
         "title" => "Доступ",
@@ -89,6 +93,7 @@ return array(
                 'icon' => 'fa-key ',
                 ]
         ],
+        "active" => false,
         'icon' => 'key',
     ],
     "address" => [
@@ -114,6 +119,7 @@ return array(
                 ],
         ],
         'icon' => 'file',
+        "active" => false
     ],
     "settings" => [
         "title" => "Настройки",

@@ -4,8 +4,7 @@
  */
 ?>
 <h1>list/index</h1>
-<?= $listName ?>
+<?= \yii\helpers\Inflector::camelize($listName) ?>
 <p>
-    You may change the content of this page by modifying
-    the file <code><?= __FILE__; ?></code>.
+    <?= \siasoft\qucms\widgets\ListView::widget() ?>
 </p>

@@ -40,7 +40,7 @@
                 
                 $url_target = isset($nav_item["url_target"]) ? 'target="' . $nav_item["url_target"] . '"' : "";
                 $icon_badge = isset($nav_item["icon_badge"]) ? '<em>' . $nav_item["icon_badge"] . '</em>' : '';
-                $icon = isset($nav_item["icon"]) ? \siasoft\fontawesome\IconHelper::icon($nav_item["icon"], ['fixedWidth' => true, 'size' => 1, 'badge' => $nav_item["icon_badge"]]) : "";
+                $icon = isset($nav_item["icon"]) ? \siasoft\fontawesome\IconHelper::icon($nav_item["icon"], ['fixedWidth' => true, 'size' => 1]) : "";
                 $nav_title = isset($nav_item["title"]) ? $nav_item["title"] : "(No Name)";
                 $label_htm = isset($nav_item["label_htm"]) ? $nav_item["label_htm"] : "";
                 $nav_htm .= '<a href="' . $url . '" ' . $url_target . ' title="' . $nav_title . '">' . $icon . ' <span class="menu-item-parent">' . $nav_title . '</span>' . $label_htm . '</a>';
