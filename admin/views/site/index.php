@@ -56,7 +56,7 @@
             <!-- end widget edit box -->
 
             <!-- widget content -->
-            <div class="widget-body no-padding">
+            <div class="widget-body no-padding "  style="overflow: scroll;">
 
                 <table id="search_result_table" class="table table-bordered smart-form">
                     <thead>

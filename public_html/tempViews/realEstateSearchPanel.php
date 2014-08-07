@@ -46,7 +46,7 @@
         </div>
         <!-- end widget edit box -->
 
-        <div class="widget-body no-padding-bottom">
+        <div class="widget-body no-padding-bottom ">
             <!-- content -->
 
             <div id="myTabContent" class="tab-content">

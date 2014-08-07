@@ -8,7 +8,7 @@
             <a href="javascript:void(0);" id="show-shortcut" data-action="toggleShortcut">
                 <img src="/img/male.png" alt="me" class="online" /> 
                 <span>
-                    Иван Стрельцов
+                    <?=\Yii::$app->user->identity->username ?>
                 </span>
                 <i class="fa fa-angle-down"></i>
             </a> 

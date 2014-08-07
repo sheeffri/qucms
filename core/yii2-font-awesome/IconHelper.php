@@ -59,6 +59,7 @@ class IconHelper
                 'rotate' => static::ROTATE_0,
                 'flipHorizontal' => false,
                 'flipVertical' => false,
+                'badge' => false,
                 'options' => []
             ],
             $options
@@ -100,7 +101,7 @@ class IconHelper
             $options['options']['class'] = $class;
         }
 
-        return Html::tag($options['tag'], '', $options['options']);
+        return Html::tag($options['tag'], $options['badge'] ? '<em>' . $options['badge'] . '</em>' : '', $options['options']);
     }
 
     public static function init()
