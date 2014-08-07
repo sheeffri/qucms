@@ -19,7 +19,7 @@ return array(
             "realEstateCreate" => [
                 "title" => "Создать новый",
                 "url" => "/real-estate/create",
-                'active' => (Yii::$app->request->url === '/real-estate') ? true : false,
+                'active' => (Yii::$app->request->url === '/real-estate/create') ? true : false,
                 'icon' => 'fa-plus',
             ],
             "realEstateTarget" => [
@@ -36,7 +36,9 @@ return array(
             ],
             "features" => [
                 "title" => "Характеристики",
-                "url" => "/real-estate-feature-group"
+                "url" => "/real-estate-feature-group",
+                'active' => (Yii::$app->request->url === '/real-estate-feature-group') ? true : false,
+                'icon' => 'fa-book',
             ],
             
         ],
@@ -77,13 +79,13 @@ return array(
             "users" => [
                 "title" => "Пользователи",
                 "url" => "/user",
-                'active' => (Yii::$app->request->url === '/contact') ? true : false,
+                'active' => (Yii::$app->request->url === '/user') ? true : false,
                 'icon' => 'fa-users ',
                 ],
             "permissions" => [
                 "title" => "Права",
                 "url" => "/permission",
-                'active' => (Yii::$app->request->url === '/contact') ? true : false,
+                'active' => (Yii::$app->request->url === '/permission') ? true : false,
                 'icon' => 'fa-key ',
                 ]
         ],
@@ -92,6 +94,7 @@ return array(
     "address" => [
         "title" => "КЛАДР",
         "url" => "/kladr",
+        'active' => (Yii::$app->request->url === '/kladr') ? true : false,
         'icon' => 'book',
     ],
     "articles" => [
@@ -115,6 +118,7 @@ return array(
     "settings" => [
         "title" => "Настройки",
         "url" => "/settings",
+        'active' => (Yii::$app->request->url === '/settings') ? true : false,
         'icon' => 'gears',
     ],
 );
