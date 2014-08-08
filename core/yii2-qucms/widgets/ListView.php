@@ -9,23 +9,23 @@
 namespace siasoft\qucms\widgets;
 
 
-use common\models\RealEstate;
+use common\models\User;
 use yii\data\ActiveDataProvider;
 use yii\grid\GridView;
-use yii\helpers\VarDumper;
 use yii\jui\Widget;
 
 class ListView extends Widget {
     public function run()
     {
-        $query = RealEstate::find();
+        $query = User::find();
         $dataProvider = new ActiveDataProvider(['query' => $query]);
-        $reaEstate = new RealEstate();
+        $reaEstate = new User();
 
-        return '<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-001" data-widget-editbutton="false"><header><span class="widget-icon"> <i class="fa fa-table"></i></span><h2>Недвижимость</h2></header><div>' . GridView::widget([
+        return GridView::widget([
             'dataProvider' => $dataProvider,
             'columns' => array_keys($reaEstate->attributes),
-            'tableOptions' => ['class' => 'table-bordered smart-form']
-        ]) . '</div></div>';
+            'options' => ['class' => 'table-responsive'],
+            'tableOptions' => ['class' => 'table-bordered']
+        ]);
     }
 } 
