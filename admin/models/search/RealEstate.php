@@ -12,14 +12,30 @@ use common\models\RealEstate as RealEstateModel;
  */
 class RealEstate extends RealEstateModel
 {
+    public $priceFrom = null;
+
+    public $priceTo = null;
+
+    public $rooms = [];
+
     public function rules()
     {
         return [
-            [['id', 'targetId', 'categoryId', 'subCategoryId', 'createdBy', 'ownerId', 'contractorId', 'contactId', 'roomCount', 'floor', 'floors', 'updatedBy', 'price', 'priceHidden', 'auction', 'isRented', 'isDeleted', 'toSite', 'forExport', 'countryId', 'regionId', 'cityId', 'buildMaterialId', 'apartmentLayoutId', 'conditionId', 'bathroomCount', 'yearBuild'], 'integer'],
+            [['id', 'targetId', 'categoryId', 'subCategoryId', 'createdBy', 'ownerId', 'contractorId', 'contactId', 'roomCount', 'floor', 'floors', 'updatedBy', 'price', 'priceFrom', 'priceTo', 'priceHidden', 'auction', 'isRented', 'isDeleted', 'toSite', 'forExport', 'countryId', 'regionId', 'cityId', 'buildMaterialId', 'apartmentLayoutId', 'conditionId', 'bathroomCount', 'yearBuild'], 'integer'],
             [['squareAll', 'squareLiving', 'squareKitchen', 'squareBalcony', 'squareBathroom', 'lat', 'lng', 'ceilingHeight'], 'number'],
-            [['createdAt', 'updatedAt', 'status', 'dateSale', 'address', 'description', 'descriptionForSite', 'descriptionNear', 'rentedWith', 'rentedTo'], 'safe'],
+            [['createdAt', 'updatedAt', 'status', 'dateSale', 'address', 'description', 'descriptionForSite', 'descriptionNear', 'rentedWith', 'rentedTo', 'rooms'], 'safe'],
         ];
     }
+
+    public function attributeLabels()
+    {
+        return array_merge(parent::attributeLabels(), [
+            'priceFrom' => 'Цена от',
+            'priceTo' => 'Цена до',
+            'rooms' => 'Количество комнат'
+        ]);
+    }
+
 
     public function scenarios()
     {

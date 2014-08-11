@@ -14,6 +14,8 @@ use yii\helpers\Html;
 
 class ActiveField extends \yii\bootstrap\ActiveField
 {
+    public $options = ['class' => 'input-group'];
+
     public $inputTemplate = "{left-addon}{inputPlace}{right-addon}";
 
     public function render($content = null)
@@ -27,9 +29,7 @@ class ActiveField extends \yii\bootstrap\ActiveField
             }
             $this->parts['{left-addon}'] = implode('', $this->parts['{left-addon}']);
             $this->parts['{right-addon}'] = implode('', $this->parts['{right-addon}']);
-            if ($this->parts['{left-addon}'] !== '' || $this->parts['{right-addon}'] != '') {
-                $this->inputTemplate = "<div class=\"input-group input\">{$this->inputTemplate}</div>";
-            }
+
             $this->parts['{inputPlace}'] = '{input}';
             $this->inputTemplate = strtr($this->inputTemplate, $this->parts);
         }
@@ -44,13 +44,13 @@ class ActiveField extends \yii\bootstrap\ActiveField
 
     public function addon($position, $value)
     {
-        $this->parts["{{$position}-addon}"][] = $value;
+        $this->parts["{{$position}-addon}"][] = "<span class=\"input-group-addon\">$value</span>";
         return $this;
     }
 
     public function icon($position, $name)
     {
-        $this->addon($position, "<span class=\"input-group-addon\"><i class=\"fa fa-$name\"></i></span>");
+        $this->addon($position, "<i class=\"fa fa-$name\"></i>");
         return $this;
     }
 
@@ -62,12 +62,39 @@ class ActiveField extends \yii\bootstrap\ActiveField
         return $this;
     }
 
+    public function placeholder($hideLabel = true)
+    {
+        if ($hideLabel) {
+            $this->label(false);
+        }
+        $this->inputOptions['placeholder'] = $this->model->getAttributeLabel($this->attribute);
+        return $this;
+    }
+
 
     public function checkbox($options = [], $enclosedByLabel = true)
     {
         Html::addCssClass($options, 'checkbox');
         Html::addCssClass($options, 'style-0');
         return parent::checkbox($options, $enclosedByLabel);
+    }
+
+    public function checkboxList($items, $options = [])
+    {
+        $items = array_map(function($item) {
+            return "<span>$item</span>";
+        }, $items);
+        $options['encode'] = false;
+        Html::addCssClass($options['itemOptions'], 'checkbox');
+        Html::addCssClass($options['itemOptions'], 'style-0');
+        $this->labelOptions['class'] = 'label col';
+        parent::checkboxList($items, $options);
+        return $this;
+    }
+
+    public function addClass($class, $optionsField = 'options') {
+        Html::addCssClass($this->{$optionsField}, $class);
+        return $this;
     }
 
     protected function renderLabelParts($label = null, $options = [])
