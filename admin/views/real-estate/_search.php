@@ -51,7 +51,10 @@ use \siasoft\qucms\widgets\ActiveForm;
 <div class="tab-content" id="myTabContent">
 <!--Поиск недвижимости-->
 <div id="s1" class="tab-pane fade active in no-padding-bottom">
-    <?php $form = ActiveForm::begin() ?>
+    <?php $form = ActiveForm::begin([
+        'action' => ['index'],
+        'method' => 'get',
+    ]) ?>
 
     <fieldset>
         <div class="row">

@@ -37,7 +37,12 @@ class RealEstateController extends Controller
     public function actionIndex()
     {
         $searchModel = new RealEstateSearch;
+
         $dataProvider = $searchModel->search(Yii::$app->request->getQueryParams());
+        if (count($_GET)) {
+            VarDumper::dump($searchModel, 10, true);
+            die();
+        }
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
