@@ -23,4 +23,5 @@ $config = yii\helpers\ArrayHelper::merge(
                 require(__DIR__ . '/../admin/config/main-local.php')
 );
 $application = new yii\web\Application($config);
+Yii::$classMap['yii\yii\helpers\Html'] = dirname(__DIR__) . '/core/yii2-qucms/helpers/Html.php';
 $application->run();
