@@ -3,16 +3,20 @@
 namespace siasoft\qucms\behaviors;
 
 use yii\base\Behavior;
+use yii\helpers\Inflector;
 
 /**
  * Description of Image
  * @property string $name Name of behavior
+ * @property array $imageNames
  * @property string $modelName Name of owner
  * @author SW-PC1
  */
 class ImageBehavior extends Behavior {
 
     private $_name;
+
+    private $_imageNames;
 
     /**
      * Max count of images, 0 - unlimited
@@ -25,12 +29,6 @@ class ImageBehavior extends Behavior {
      * @var string[]
      */
     public $sections = [];
-
-    /**
-     * Count of required images
-     * @var int
-     */
-    public $requiredCount = 0;
 
     /**
      * Getter for modelName
@@ -51,7 +49,24 @@ class ImageBehavior extends Behavior {
         }
         return $this->_name;
     }
-    
+
+    protected function getImageNames() {
+        if ($this->_imageNames === null) {
+            $name = $this->name;
+            $names = [$name];
+            foreach($this->sections as $section) {
+                $names[] = $name . Inflector::camelize($section);
+            }
+        }
+        return $this->_imageNames;
+    }
+
+    public function __get($name)
+    {
+
+        return parent::__get($name);
+    }
+
     public function canGetProperty($name, $checkVars = true) {
         switch ($name) {
             case 'name':
@@ -60,6 +75,11 @@ class ImageBehavior extends Behavior {
             case 'requiredFields':
                 return false;
         }
+
+        if (in_array($name, $this->imageNames)) {
+            return true;
+        }
+
         return parent::canGetProperty($name, $checkVars);
     }
 }

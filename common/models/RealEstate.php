@@ -2,6 +2,7 @@
 
 namespace common\models;
 
+use siasoft\qucms\behaviors\ImageBehavior;
 use Yii;
 
 /**
@@ -88,6 +89,17 @@ class RealEstate extends \yii\db\ActiveRecord
         ['yearBuild', 'date', 1],
         ['ceilingHeight', 'int', 1]
     ];
+
+    public function behaviors()
+    {
+        return [
+            'images' => [
+                'class' => ImageBehavior::className(),
+                'maxCount' => '0'
+            ]
+        ];
+    }
+
 
     /**
      * @inheritdoc
