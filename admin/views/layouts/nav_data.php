@@ -1,130 +1,44 @@
 <?php
 
 return array(
-    "mainPage" => [
-        'title' => 'Главная',
-        'url' => '/',
-        'icon' => 'home',
-        'active' => (Yii::$app->request->url == '/') ? true : false,
-    ],
-    "realEstates" => [
-        "title" => "Недвижимость",
-        "sub" => [
-            "realEstate" => [
-                "title" => "Вся недвижимость",
-                "url" => "/real-estate",
-                'active' => (Yii::$app->request->url === '/real-estate') ? true : false,
-                'icon' => 'fa-building',
-            ],
-            "realEstateCreate" => [
-                "title" => "Создать новый",
-                "url" => "/real-estate/create",
-                'active' => (Yii::$app->request->url === '/real-estate/create') ? true : false,
-                'icon' => 'fa-plus',
-            ],
-            "realEstateTarget" => [
-                "title" => "Типы недвижимости",
-                "url" => "/real-estate-target",
-                'active' => (Yii::$app->request->url === '/real-estate-target') ? true : false,
-                'icon' => 'fa-book',
-            ],
-            "realEstateCategories" => [
-                "title" => "Категории",
-                "url" => "/real-estate-category",
-                'active' => (Yii::$app->request->url === '/real-estate-category') ? true : false,
-                'icon' => 'fa-book',
-            ],
-            "features" => [
-                "title" => "Характеристики",
-                "url" => "/real-estate-feature-group",
-                'active' => (Yii::$app->request->url === '/real-estate-feature-group') ? true : false,
-                'icon' => 'fa-book',
-            ],
-            
+    ['label' => 'Главная', 'url' => ['site/index'], 'icon' => 'home'],
+    [
+        "label" => "Недвижимость",
+        "items" => [
+            ["label" => "Вся недвижимость", "url" => ["real-estate/index"], 'icon' => 'building'],
+            ["label" => "Создать новый", "url" => ["real-estate/create"], 'icon' => 'plus'],
+            ["label" => "Типы недвижимости", "url" => ["real-estate-target/index"], 'icon' => 'book'],
+            ["label" => "Категории", "url" => ["real-estate-category/index"], 'icon' => 'book'],
+            ["label" => "Характеристики", "url" => ["real-estate-feature-group/index"], 'icon' => 'book'],
         ],
-        "active" => false,
-        'icon' => 'building',
-//        'active' => (strpos(Yii::$app->request->url,'real-estate') !== 0) ? true : false,
+        'icon' => 'building'
     ],
-    "contacts" => [
-        "title" => "Клиенты и контакты",
-        "sub" => [
-            "contact" => [
-                "title" => "Контакты",
-                "url" => "/contact",
-                'active' => (Yii::$app->request->url === '/contact') ? true : false,
-                'icon' => 'fa-phone ',
-            ],
-            "contractor" => [
-                "title" => "Контрагенты",
-                "url" => "/contractor",
-                'active' => (Yii::$app->request->url === '/contractor') ? true : false,
-                'icon' => 'fa-users',]
+    [
+        "label" => "Клиенты и контакты",
+        "items" => [
+            ["label" => "Контакты", "url" => ["contact/index"], 'icon' => 'phone '],
+            ["label" => "Контрагенты", "url" => ["contractor/index"], 'icon' => 'users']
         ],
-        "active" => false,
         'icon' => 'group',
     ],
-    "tasks" => [
-        "title" => "Календарь задач !",
-        "url" => "/tasks",
-        'icon' => 'calendar',
-        "active" => false
-    ],
-    "messages" => [
-        "title" => "Сообщения !",
-        "url" => "/messages",
-        'icon' => 'comment ',
-        "active" => false
-        //'icon_badge' => 5,
-    ],
-    "userPermissions" => [
-        "title" => "Доступ",
-        "sub" => [
-            "users" => [
-                "title" => "Пользователи",
-                "url" => "/user",
-                'active' => (Yii::$app->request->url === '/user') ? true : false,
-                'icon' => 'fa-users ',
-                ],
-            "permissions" => [
-                "title" => "Права",
-                "url" => "/permission",
-                'active' => (Yii::$app->request->url === '/permission') ? true : false,
-                'icon' => 'fa-key ',
-                ]
+    ["label" => "Календарь задач !", "url" => ["tasks/index"], 'icon' => 'calendar'],
+    ["label" => "Сообщения !", "url" => ["messages/index"], 'icon' => 'comment'],
+    [
+        "label" => "Доступ",
+        "items" => [
+            "users" => ["label" => "Пользователи", "url" => ["user/index"], 'icon' => 'users'],
+            "permissions" => ["label" => "Права", "url" => ["permission/index"], 'icon' => 'key']
         ],
-        "active" => false,
         'icon' => 'key',
     ],
-    "address" => [
-        "title" => "КЛАДР",
-        "url" => "/kladr",
-        'active' => (Yii::$app->request->url === '/kladr') ? true : false,
-        'icon' => 'book',
-    ],
-    "articles" => [
-        "title" => "Публикации",
-        "sub" => [
-            "articleCategory" => [
-                "title" => "Категории",
-                "url" => "/article-category",
-                'active' => (Yii::$app->request->url === '/article-category') ? true : false,
-                'icon' => 'fa-book ',
-                ],
-            "article" => [
-                "title" => "Статьи",
-                "url" => "/article",
-                'active' => (Yii::$app->request->url === '/article') ? true : false,
-                'icon' => 'fa-file ',
-                ],
+    ["label" => "КЛАДР", "url" => ["kladr/index"], 'icon' => 'book'],
+    [
+        "label" => "Публикации",
+        "items" => [
+            ["label" => "Категории", "url" => ["article-category/index"], 'icon' => 'book'],
+            ["label" => "Статьи", "url" => ["article/index"], 'icon' => 'file'],
         ],
         'icon' => 'file',
-        "active" => false
     ],
-    "settings" => [
-        "title" => "Настройки",
-        "url" => "/settings",
-        'active' => (Yii::$app->request->url === '/settings') ? true : false,
-        'icon' => 'gears',
-    ],
+    ["label" => "Настройки", "url" => ["settings/index"], 'icon' => 'gears'],
 );

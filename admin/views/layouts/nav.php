@@ -1,3 +1,6 @@
+<?php
+use yii\helpers\Html;
+?>
 <!-- Left panel : Navigation area -->
 <!-- Note: This width of the aside area can be adjusted through LESS variables -->
 <aside id="left-panel">
@@ -14,71 +17,32 @@
             </a> 
         </span>
     </div>
-    <!-- end user info -->
 
-    <!-- NAVIGATION : This navigation is also responsive
-
-    To make this navigation dynamic please make sure to link the node
-    (the reference to the nav > ul) after page load. Or the navigation
-    will not initialize.
-    -->
     <nav>
-            <!-- NOTE: Notice the gaps after each icon usage <i></i>..
-            Please note that these links work a bit different than
-            traditional hre="" links. See documentation for details.
-        -->
-        <ul>
-            <?php
-            $page_nav = require 'nav_data.php';
-            foreach ($page_nav as $nav_item) {
-                //process parent nav
-                $nav_htm = '';
-                
-
-                $url = isset($nav_item["url"]) ? $nav_item["url"] : "#";
-               
-                
-                $url_target = isset($nav_item["url_target"]) ? 'target="' . $nav_item["url_target"] . '"' : "";
-                $icon_badge = isset($nav_item["icon_badge"]) ? '<em>' . $nav_item["icon_badge"] . '</em>' : '';
-                $icon = isset($nav_item["icon"]) ? \siasoft\fontawesome\IconHelper::icon($nav_item["icon"], ['fixedWidth' => true, 'size' => 1]) : "";
-                $nav_title = isset($nav_item["title"]) ? $nav_item["title"] : "(No Name)";
-                $label_htm = isset($nav_item["label_htm"]) ? $nav_item["label_htm"] : "";
-                $nav_htm .= '<a href="' . $url . '" ' . $url_target . ' title="' . $nav_title . '">' . $icon . ' <span class="menu-item-parent">' . $nav_title . '</span>' . $label_htm . '</a>';
-
-                if (isset($nav_item["sub"]) && $nav_item["sub"]) {
-                    $nav_htm .= process_sub_nav($nav_item["sub"]);
+        <?php
+        function setLabel(&$items, $root = true) {
+            foreach($items as &$item) {
+                if (isset($item['items'])) {
+                    setLabel($item['items'], false);
                 }
-
-                echo '<li ' . (($nav_item["active"] === true) ? 'class = "active"' : '') . '>' . $nav_htm . '</li>';
+                $item['label'] =
+                    (isset($item['icon']) ? "<i class=\"fa fa-lg fa-fw fa-$item[icon]\"></i>" : "") .
+                    ($root ? '<span class="menu-item-parent">' : "") .
+                    Html::encode($item['label']) .
+                    ($root ? "<span>" : "");
             }
-
-            function process_sub_nav($nav_item) {
-                $sub_item_htm = "";
-                if (isset($nav_item["sub"]) && $nav_item["sub"]) {
-                    $sub_nav_item = $nav_item["sub"];
-                    $sub_item_htm = process_sub_nav($sub_nav_item);
-                } else {
-                    $sub_item_htm .= '<ul>';
-                    foreach ($nav_item as $sub_item) {
-                        $url = isset($sub_item["url"]) ? $sub_item["url"] : "#";
-                        $url_target = isset($sub_item["url_target"]) ? 'target="' . $sub_item["url_target"] . '"' : "";
-                        $icon = isset($sub_item["icon"]) ? '<i class="fa fa-lg fa-fw ' . $sub_item["icon"] . '"></i>' : "";
-                        $nav_title = isset($sub_item["title"]) ? $sub_item["title"] : "(No Name)";
-                        $label_htm = isset($sub_item["label_htm"]) ? $sub_item["label_htm"] : "";
-                        $sub_item_htm .=
-                                '<li ' . (($sub_item["active"] == true) ? 'class = "active"' : '') . '>
-											<a href="' . \yii\helpers\Url::to($url) . '" ' . $url_target . '>' . $icon . ' ' . $nav_title . $label_htm . '</a>
-											' . (isset($sub_item["sub"]) ? process_sub_nav($sub_item["sub"]) : '') . '
-										</li>';
-                    }
-                    $sub_item_htm .= '</ul>';
-                }
-                return $sub_item_htm;
-            }
-            ?>
-        </ul>
-
+            unset($item);
+        }
+        $items = require 'nav_data.php';
+        setLabel($items);
+        ?>
+        <?= \yii\widgets\Menu::widget([
+            'labelTemplate' => '<a href="#">{label}</a>',
+            'activateParents' => true,
+            'encodeLabels' => false,
+            'items' => $items]) ?>
     </nav>
+
     <span class="minifyme" data-action="minifyMenu"> <i class="fa fa-arrow-circle-left hit"></i> </span>
 
 </aside>
