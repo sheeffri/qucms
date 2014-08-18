@@ -34,6 +34,13 @@ use yii\helpers\Html;
             unset($item);
         }
         $items = require 'nav_data.php';
+        $items[] = ['label' => 'Страница', 'items' =>[
+            ['label' => 'Настройки'],
+            ['label' => 'Список', 'items' => [
+                ['label' => 'Настройка'],
+                ['label' => 'Фильтр']
+            ]]
+        ]];
         setLabel($items);
         ?>
         <?= \yii\widgets\Menu::widget([

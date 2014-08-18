@@ -14,24 +14,6 @@ use siasoft\qucms\widgets\AutoComplete;
 ?>
 
 <div class="real-estate-form">
-<?php
-
-if ($model->targetId === null) {
-    $targets = ['' => 'Выбирете тип'] + $targets;
-}
-
-?>
-<?= Html::beginForm('real-estate/create', 'get', ['id' => 'selectTargetForm', 'class' => 'form-horizontal']) ?>
-<div class="input-group">
-            <span class="input-group-addon">
-                <i class="fa fa-cubes"></i>
-            </span>
-
-    <div>
-        <?= Html::dropDownList('targetId', $model->targetId, $targets, ['id' => 'selectTarget', 'class' => 'form-control']) ?>
-    </div>
-</div>
-<?= Html::endForm() ?>
 
 <?php
 $this->registerJs("jQuery('#selectTarget').change(function(){jQuery('#selectTargetForm').submit();});");
@@ -62,9 +44,9 @@ $this->registerJs("jQuery('#$form->id').deserialize(localStorage.getItem('real-e
 
 <fieldset>
 
-    <?= $form->field($model, 'categoryId')->icon('left', 'list')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'real_estate_category', 'label' => 'title', 'value' => 'id', 'dependency' => []]]) ?>
+    <?= $form->field($model, 'categoryId')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'real_estate_category', 'label' => 'title', 'value' => 'id', 'dependency' => []]]) ?>
 
-    <?= $form->field($model, 'subCategoryId')->icon('left', 'outdent')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'real_estate_sub_category', 'label' => 'title', 'value' => 'id', 'dependency' => []]]) ?>
+    <?= $form->field($model, 'subCategoryId')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'real_estate_sub_category', 'label' => 'title', 'value' => 'id', 'dependency' => []]]) ?>
 
 </fieldset>
 
@@ -93,13 +75,13 @@ var getCountries = function(request, response) {
 <div class="row">
 
     <div class="col-sm-6">
-        <?= $form->field($addressModel, 'country')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'country', 'label' => 'title', 'value' => 'id', 'dependency' => []]])->icon('left', 'bank')->addon('right', '<span class="input-group-btn"><button class="btn btn-default"><i class="fa fa-folder-open"></i></button></span>') ?>
+        <?= $form->field($addressModel, 'country')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'country', 'label' => 'title', 'value' => 'id', 'dependency' => []]]) ?>
 
-        <?= $form->field($addressModel, 'region')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'region', 'label' => 'title', 'value' => 'id', 'dependency' => ['countryId' => Html::getInputId($addressModel, 'countryValue')]]])->icon('left', 'flag') ?>
+        <?= $form->field($addressModel, 'region')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'region', 'label' => 'title', 'value' => 'id', 'dependency' => ['countryId' => Html::getInputId($addressModel, 'countryValue')]]]) ?>
 
-        <?= $form->field($addressModel, 'city')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'city', 'label' => 'title', 'value' => 'id', 'dependency' => ['regionId' => Html::getInputId($addressModel, 'regionValue')]]])->icon('left', 'building') ?>
+        <?= $form->field($addressModel, 'city')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'city', 'label' => 'title', 'value' => 'id', 'dependency' => ['regionId' => Html::getInputId($addressModel, 'regionValue')]]]) ?>
 
-        <?= $form->field($model, 'address')->textInput(['maxlength' => 255])->icon('left', 'building-o') ?>
+        <?= $form->field($model, 'address')->textInput(['maxlength' => 255]) ?>
 
     </div>
 
@@ -107,9 +89,9 @@ var getCountries = function(request, response) {
 
         <?= $form->field($model, 'descriptionNear')->textarea(['rows' => 4]) ?>
 
-        <?= $form->field($model, 'lat')->textInput()->addon('right', '<span class="input-group-addon">.00</span>') ?>
+        <?= $form->field($model, 'lat')->radio() ?>
 
-        <?= $form->field($model, 'lng')->textInput()->addon('right', '<span class="input-group-addon">.00</span>') ?>
+        <?= $form->field($model, 'lng')->radio() ?>
 
     </div>
 
@@ -135,7 +117,7 @@ var getCountries = function(request, response) {
 
     function codeAddress() {
         var address = $('#realestate-address').val();
-        geocoder.geocode( { 'address': address}, function(results, status) {
+        geocoder.geocode({ 'address': address}, function (results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
                 map.setCenter(results[0].geometry.location);
                 $("#realestate-lat").val(results[0].geometry.location.lat());
@@ -156,7 +138,7 @@ $this->registerJs('initialize(); $("#find").click(codeAddress); ');
 
 <?php ob_start() ?>
 
-<?= $form->field($model, 'contractorId')->textInput() ?>
+<?= $form->field($model, 'contractorId')->textInput(['left-icon' => 'user', 'right-icon' => 'user']) ?>
 
 <?= $form->field($model, 'contactId')->textInput() ?>
 
@@ -186,9 +168,9 @@ foreach ($model->features as $name => $group) {
 
 <?php ob_start() ?>
 
-<?= $form->field($model, 'toSite')->textInput() ?>
+<?= $form->field($model, 'toSite')->checkbox() ?>
 
-<?= $form->field($model, 'forExport')->textInput() ?>
+<?= $form->field($model, 'forExport')->checkbox() ?>
 
 <?php $export = ob_get_clean() ?>
 

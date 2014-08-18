@@ -106,12 +106,8 @@ use yii\helpers\Html;
     </div>
     <!-- end pulled right: nav area -->
 </header>
-<!-- END HEADER -->
 
-<!-- SHORTCUT AREA : With large tiles (activated via clicking user name tag)
-Note: These tiles are completely responsive,
-you can add as many as you like
--->
+
 <div id="shortcut">
     <ul>
         <li>
@@ -134,4 +130,3 @@ you can add as many as you like
         </li>
     </ul>
 </div>
-<!-- END SHORTCUT AREA -->

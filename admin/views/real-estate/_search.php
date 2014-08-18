@@ -59,10 +59,10 @@ use \siasoft\qucms\widgets\ActiveForm;
     <fieldset>
         <div class="row">
             <div class="col col-sm-3">
-                <?= $form->field($model, 'priceFrom')->icon('left', 'dollar')->placeholder() ?>
+                <?= $form->field($model, 'priceFrom')->placeholder() ?>
             </div>
             <div class="col col-sm-3">
-                <?= $form->field($model, 'priceTo')->icon('left', 'dollar')->placeholder() ?>
+                <?= $form->field($model, 'priceTo')->placeholder() ?>
             </div>
             <div class="col col-sm-6">
                 <?= $form->field($model, 'rooms', ['options' => ['class' => 'inline-group']])->checkboxList(['1', '2', '3', '4', '5+']) ?>
@@ -71,10 +71,10 @@ use \siasoft\qucms\widgets\ActiveForm;
 
         <div class="row margin-top-10">
             <div class="col col-sm-3">
-                <?= $form->field($model, 'id')->icon('left', 'building')->placeholder() ?>
+                <?= $form->field($model, 'id')->placeholder() ?>
             </div>
             <div class="col col-sm-3">
-                <?= $form->field($model, 'targetId')->dropDownList(['Тип недвижимости', 'Квартира', 'Дом'])->label(false)->icon('left', 'building') ?>
+                <?= $form->field($model, 'targetId')->dropDownList(['Тип недвижимости', 'Квартира', 'Дом'])->label(false) ?>
             </div>
 
             <section class="col col-3">
@@ -99,7 +99,7 @@ use \siasoft\qucms\widgets\ActiveForm;
     <fieldset>
         <div class="row">
             <div class="col col-sm-2">
-                <?= $form->field($model, 'price')->icon('left', 'phone')->placeholder() ?>
+                <?= $form->field($model, 'price')->placeholder() ?>
             </div>
             <section class="col col-2">
                 <label class="select">

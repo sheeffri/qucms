@@ -14,6 +14,7 @@ defined('YII_ENV') or define('YII_ENV', 'dev');
 
 require(__DIR__ . '/../vendor/autoload.php');
 require(__DIR__ . '/../vendor/yiisoft/yii2/Yii.php');
+Yii::$classMap['yii\helpers\Html'] = dirname(__DIR__) . '/core/yii2-qucms/helpers/Html.php';
 require(__DIR__ . '/../config/aliases.php');
 
 $config = yii\helpers\ArrayHelper::merge(
@@ -23,5 +24,4 @@ $config = yii\helpers\ArrayHelper::merge(
                 require(__DIR__ . '/../admin/config/main-local.php')
 );
 $application = new yii\web\Application($config);
-Yii::$classMap['yii\yii\helpers\Html'] = dirname(__DIR__) . '/core/yii2-qucms/helpers/Html.php';
 $application->run();
