@@ -72,63 +72,70 @@ var getCountries = function(request, response) {
 
 <?php ob_start(); ?>
 
-<div class="row">
+<div class="padding-10">
 
-    <div class="col-sm-6">
-        <?= $form->field($addressModel, 'country')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'country', 'label' => 'title', 'value' => 'id', 'dependency' => []]]) ?>
+    <div class="row">
 
-        <?= $form->field($addressModel, 'region')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'region', 'label' => 'title', 'value' => 'id', 'dependency' => ['countryId' => Html::getInputId($addressModel, 'countryValue')]]]) ?>
+        <div class="col-sm-6">
+            <fieldset>
+                <?= $form->field($addressModel, 'country')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'country', 'label' => 'title', 'value' => 'id', 'dependency' => []]]) ?>
 
-        <?= $form->field($addressModel, 'city')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'city', 'label' => 'title', 'value' => 'id', 'dependency' => ['regionId' => Html::getInputId($addressModel, 'regionValue')]]]) ?>
+                <?= $form->field($addressModel, 'region')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'region', 'label' => 'title', 'value' => 'id', 'dependency' => ['countryId' => Html::getInputId($addressModel, 'countryValue')]]]) ?>
 
-        <?= $form->field($model, 'address')->textInput(['maxlength' => 255]) ?>
+                <?= $form->field($addressModel, 'city')->widget(AutoComplete::className(), ['sourceConfig' => ['table' => 'city', 'label' => 'title', 'value' => 'id', 'dependency' => ['regionId' => Html::getInputId($addressModel, 'regionValue')]]]) ?>
+
+                <?= $form->field($model, 'address')->textInput(['maxlength' => 255]) ?>
+            </fieldset>
+
+        </div>
+
+        <div class="col-sm-6">
+            <fieldset>
+
+                <?= $form->field($model, 'descriptionNear')->textarea(['rows' => 4]) ?>
+
+                <?= $form->field($model, 'lat')->radio() ?>
+
+                <?= $form->field($model, 'lng')->radio() ?>
+            </fieldset>
+
+        </div>
+
+        <button id="find" class="btn btn-success">Найти на карте</button>
 
     </div>
 
-    <div class="col-sm-6">
+    <div id="map_canvas" style="width:100%; height:500px"></div>
 
-        <?= $form->field($model, 'descriptionNear')->textarea(['rows' => 4]) ?>
-
-        <?= $form->field($model, 'lat')->radio() ?>
-
-        <?= $form->field($model, 'lng')->radio() ?>
-
-    </div>
-
-    <button id="find" class="btn btn-success">Найти на карте</button>
-
-</div>
-
-<div id="map_canvas" style="width:100%; height:500px"></div>
-
-<script>
-    var geocoder;
-    var map;
-    function initialize() {
-        geocoder = new google.maps.Geocoder();
-        var latlng = new google.maps.LatLng(-34.397, 150.644);
-        var mapOptions = {
-            zoom: 8,
-            center: latlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-        }
-        map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-    }
-
-    function codeAddress() {
-        var address = $('#realestate-address').val();
-        geocoder.geocode({ 'address': address}, function (results, status) {
-            if (status == google.maps.GeocoderStatus.OK) {
-                map.setCenter(results[0].geometry.location);
-                $("#realestate-lat").val(results[0].geometry.location.lat());
-                $("#realestate-lng").val(results[0].geometry.location.lng())
-            } else {
-                alert("Geocode was not successful for the following reason: " + status);
+    <script>
+        var geocoder;
+        var map;
+        function initialize() {
+            geocoder = new google.maps.Geocoder();
+            var latlng = new google.maps.LatLng(-34.397, 150.644);
+            var mapOptions = {
+                zoom: 8,
+                center: latlng,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
             }
-        });
-        return false;
-    }
-</script>
+            map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+        }
+
+        function codeAddress() {
+            var address = $('#realestate-address').val();
+            geocoder.geocode({ 'address': address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    map.setCenter(results[0].geometry.location);
+                    $("#realestate-lat").val(results[0].geometry.location.lat());
+                    $("#realestate-lng").val(results[0].geometry.location.lng())
+                } else {
+                    alert("Geocode was not successful for the following reason: " + status);
+                }
+            });
+            return false;
+        }
+    </script>
+</div>
 
 <?php $this->registerJsFile("http://maps.googleapis.com/maps/api/js?key=AIzaSyAEMwuVSplIa1LuupkWIjNT1Yi33Q8b3Z8&sensor=false");
 $this->registerJs('initialize(); $("#find").click(codeAddress); ');
@@ -201,7 +208,7 @@ foreach ($model->features as $name => $group) {
 <?php $descriptionForSite = $form->field($model, 'descriptionForSite')->widget('\siasoft\qucms\widgets\Summernote')->label(false) ?>
 
 <?=
-\yii\bootstrap\Tabs::widget(['items' => [
+\yii\jui\Tabs::widget(['items' => [
     [
         'label' => 'Основные',
         'content' => $main],
