@@ -23,6 +23,15 @@ class Html extends BaseHtml
 
     public static function input($type, $name = null, $value = null, $options = [])
     {
+        $input = self::icons($options) . parent::input($type, $name, $value, $options) . ArrayHelper::getValue(self::$additional, $type, '');
+        if (isset(self::$labelClasses[$type])) {
+            return self::tag("label", $input, ['class' => self::$labelClasses[$type]]);
+        }
+        return $input;
+    }
+
+    protected static function icons(&$options)
+    {
         $leftIcon = ArrayHelper::remove($options, 'left-icon', '');
         $rightIcon = ArrayHelper::remove($options, 'right-icon', '');
         $icons = '';
@@ -32,12 +41,7 @@ class Html extends BaseHtml
         if ($rightIcon !== '') {
             $icons = $icons . "<i class=\"icon-append fa fa-$rightIcon\"></i>";
         }
-
-        $input = $icons . parent::input($type, $name, $value, $options) . ArrayHelper::getValue(self::$additional, $type, '');
-        if (isset(self::$labelClasses[$type])) {
-            return self::tag("label", $input, ['class' => self::$labelClasses[$type]]);
-        }
-        return $input;
+        return $icons;
     }
 
     public static function dropDownList($name, $selection = null, $items = [], $options = [])
