@@ -37,14 +37,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= Html::endForm() ?>
 </div>
 
-
-<div class="row">
+<section id="widget-grid">
+    <div class="row">
         <article class="col-xs-12 sortable-grid ui-sortable">
-            <div class="jarviswidget jarviswidget-color-blueDark">
-                <header role="heading">
-                    <h2><strong>Widget</strong> <i>Colors</i></h2>
+            <div id="wid-id-0" class="jarviswidget jarviswidget-sortable">
+                <header>
+                    <h2>Недвижимость</h2>
                 </header>
-                <div role="content">
+                <div>
 
                     <?=
                     $this->render('_form', [
@@ -56,6 +56,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
             </div>
         </article>
-</div>
+    </div>
+</section>
 
 

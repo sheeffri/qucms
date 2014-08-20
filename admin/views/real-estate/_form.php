@@ -207,38 +207,42 @@ foreach ($model->features as $name => $group) {
 
 <?php $descriptionForSite = $form->field($model, 'descriptionForSite')->widget('\siasoft\qucms\widgets\Summernote')->label(false) ?>
 
-<?=
-\yii\jui\Tabs::widget(['items' => [
-    [
-        'label' => 'Основные',
-        'content' => $main],
-    [
-        'label' => 'Адрес',
-        'content' => $address],
-    [
-        'label' => 'Клиент',
-        'content' => $contractor],
-    [
-        'label' => 'Характеристики',
-        'content' => $features],
-    [
-        'label' => 'Описание',
-        'content' => $description],
-    [
-        'label' => 'Описание для сайта',
-        'content' => $descriptionForSite],
-    [
-        'label' => 'Экспорт',
-        'content' => $export],
-    [
-        'label' => 'Пока хз',
-        'content' => $hz],
-]]) ?>
+
+<?php ActiveForm::end(); ?>
+
+    <?=
+    \yii\jui\Tabs::widget(['items' => [
+        [
+            'label' => 'Основные',
+            'content' => $main],
+        [
+            'label' => 'Адрес',
+            'content' => $address],
+        [
+            'label' => 'Клиент',
+            'content' => $contractor],
+        [
+            'label' => 'Характеристики',
+            'content' => $features],
+        [
+            'label' => 'Описание',
+            'content' => $description],
+        [
+            'label' => 'Описание для сайта',
+            'content' => $descriptionForSite],
+        [
+            'label' => 'Экспорт',
+            'content' => $export],
+        [
+            'label' => 'Пока хз',
+            'content' => $hz],
+    ]]) ?>
+</div>
 
 <div class="form-group">
     <?= Html::submitButton('<i class="fa fa-save fa-lg"></i> ' . ($model->isNewRecord ? 'Создать' : 'Изменить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 </div>
 
-<?php ActiveForm::end(); ?>
+<?php //ActiveForm::end(); ?>
 
 </div>

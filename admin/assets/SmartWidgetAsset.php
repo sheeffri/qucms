@@ -24,6 +24,7 @@ class SmartWidgetAsset extends \yii\web\AssetBundle
     public $depends = [
         'yii\bootstrap\BootstrapPluginAsset',
         'yii\jui\TooltipAsset',
+        'yii\jui\SortableAsset'
     ];
 
 }

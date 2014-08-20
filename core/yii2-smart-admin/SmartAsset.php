@@ -19,7 +19,12 @@ class SmartAsset extends AssetBundle
         'smartadmin-rtl.min.css'
     ];
 
+    public $js = [
+        'jarvis.widget.js'
+    ];
+
     public $depends = [
-        'yii\bootstrap\BootstrapAsset'
+        'yii\bootstrap\BootstrapAsset',
+        'yii\jui\SortableAsset'
     ];
 } 
