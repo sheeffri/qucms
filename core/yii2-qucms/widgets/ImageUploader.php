@@ -36,12 +36,7 @@ class ImageUploader extends Widget
      * name of image behavior
      * @var string
      */
-    public $imageBehavior;
-    /**
-     * editing form of model
-     * @var \yii\widgets\ActiveForm
-     */
-    public $targetForm;
+    public $attribute;
     /**
      * class of template item
      * @var string 
@@ -66,17 +61,17 @@ class ImageUploader extends Widget
     public function init()
     {
         parent::init();
-        $this->_behavior = $behavior = $this->model->getBehavior($this->imageBehavior);
+        $this->_behavior = $behavior = $this->model->getBehavior($this->attribute);
     }
 
     public function run()
     {
         $this->options['id'] = $this->id;
-        echo $this->render('image-uploader', [
-            'maxCount' => $this->_behavior->maxCount,
-            'options' => $this->options
-        ]);
-        $this->registerScript();
+        //echo $this->render('image-uploader', [
+            //'maxCount' => $this->_behavior->maxCount,
+            //'options' => $this->options
+        //]);
+        //$this->registerScript();
     }
 
     public function beginTemplate(array $options = [])
@@ -107,7 +102,6 @@ class ImageUploader extends Widget
         $options = Json::encode(array_merge([
                     'sections' => $this->_behavior->sections,
                     'template' => strtr($this->_templateItem, array_map($replaceIds, $this->templateParts)),
-                    'targetForm' => '#'.$this->targetForm->id,
                     'templateOptions' => $this->_templateItem
                                 ], array_map($replaceIds, $this->clientOptions)));
         $this->view->registerJs("jQuery('#{$this->id}').imageUploader($options);");

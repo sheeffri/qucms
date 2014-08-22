@@ -207,42 +207,46 @@ foreach ($model->features as $name => $group) {
 
 <?php $descriptionForSite = $form->field($model, 'descriptionForSite')->widget('\siasoft\qucms\widgets\Summernote')->label(false) ?>
 
+<?php ob_start() ?>
+<?= $form->field($model, 'images')->widget(\siasoft\qucms\widgets\ImageUploader::className()) ?>
+<?php $images = ob_get_clean() ?>
 
-<?php ActiveForm::end(); ?>
-
-    <?=
-    \yii\jui\Tabs::widget(['items' => [
-        [
-            'label' => 'Основные',
-            'content' => $main],
-        [
-            'label' => 'Адрес',
-            'content' => $address],
-        [
-            'label' => 'Клиент',
-            'content' => $contractor],
-        [
-            'label' => 'Характеристики',
-            'content' => $features],
-        [
-            'label' => 'Описание',
-            'content' => $description],
-        [
-            'label' => 'Описание для сайта',
-            'content' => $descriptionForSite],
-        [
-            'label' => 'Экспорт',
-            'content' => $export],
-        [
-            'label' => 'Пока хз',
-            'content' => $hz],
-    ]]) ?>
+<?=
+\yii\jui\Tabs::widget(['items' => [
+    [
+        'label' => 'Основные',
+        'content' => $main],
+    [
+        'label' => 'Адрес',
+        'content' => $address],
+    [
+        'label' => 'Клиент',
+        'content' => $contractor],
+    [
+        'label' => 'Характеристики',
+        'content' => $features],
+    [
+        'label' => 'Описание',
+        'content' => $description],
+    [
+        'label' => 'Описание для сайта',
+        'content' => $descriptionForSite],
+    [
+        'label' => 'Экспорт',
+        'content' => $export],
+    [
+        'label' => 'Пока хз',
+        'content' => $hz],
+    [
+        'label' => 'Изображения',
+        'content' => $images]
+]]) ?>
 </div>
 
 <div class="form-group">
     <?= Html::submitButton('<i class="fa fa-save fa-lg"></i> ' . ($model->isNewRecord ? 'Создать' : 'Изменить'), ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 </div>
 
-<?php //ActiveForm::end(); ?>
+<?php ActiveForm::end(); ?>
 
 </div>
