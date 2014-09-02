@@ -25,4 +25,5 @@ composer.lock
 .DS_Store
 
 /admin/runtime
+/front/runtime
 /public_html/assets
