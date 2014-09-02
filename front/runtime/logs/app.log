@@ -482,3 +482,183 @@ $_SERVER = array (
   'REQUEST_TIME_FLOAT' => 1409653648.57688,
   'REQUEST_TIME' => 1409653648,
 )
+2014-09-02 10:33:06 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('site/img/demo/i...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 10:33:06 [::1][][-][info][application] $_COOKIE = array (
+  'PHPSESSID' => 'oubj66s8usj437m0g2ftb7nan1',
+  '_csrf' => '0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs:32:"TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '62804',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/site/img/demo/iphoneview.png',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/site/img/demo/iphoneview.png',
+  'PHP_SELF' => '/index.php/site/img/demo/iphoneview.png',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/index.php/site/login',
+  'HTTP_COOKIE' => 'PHPSESSID=oubj66s8usj437m0g2ftb7nan1; _csrf=0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs%3A32%3A%22TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409653986.099185,
+  'REQUEST_TIME' => 1409653986,
+)
+2014-09-02 10:33:06 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('site/img/demo/i...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 10:33:06 [::1][][-][info][application] $_COOKIE = array (
+  'PHPSESSID' => 'oubj66s8usj437m0g2ftb7nan1',
+  '_csrf' => '0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs:32:"TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '62806',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/site/img/demo/iphoneview.png',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/site/img/demo/iphoneview.png',
+  'PHP_SELF' => '/index.php/site/img/demo/iphoneview.png',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/index.php/site/login',
+  'HTTP_COOKIE' => 'PHPSESSID=oubj66s8usj437m0g2ftb7nan1; _csrf=0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs%3A32%3A%22TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409653986.907232,
+  'REQUEST_TIME' => 1409653986,
+)
+2014-09-02 10:33:34 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "real-estate/create".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('real-estate/cre...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "real-estate/create".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 10:33:34 [::1][][-][info][application] $_GET = array (
+  'targetId' => '1',
+)
+
+$_COOKIE = array (
+  'PHPSESSID' => 'u006m1mvh90ovdstfk4bb7m7m1',
+  '_csrf' => '0531b6ada9434f98e2d22056a71aa409a214e1003434211220ffd1aa49c21db6s:32:"QUVVudOHW5s.9rCEwEeGYSyT-F9NgICe";',
+  '_identity' => '60de36d60d7473186146e3394124c4bcd3bd399a2e3aecbe9a7f216e4b7e60fcs:46:"[2,"lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y",2592000]";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '62942',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/real-estate/create?targetId=1',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/real-estate/create',
+  'PHP_SELF' => '/index.php/real-estate/create',
+  'QUERY_STRING' => 'targetId=1',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/admin.php/real-estate/create',
+  'HTTP_COOKIE' => 'PHPSESSID=u006m1mvh90ovdstfk4bb7m7m1; _csrf=0531b6ada9434f98e2d22056a71aa409a214e1003434211220ffd1aa49c21db6s%3A32%3A%22QUVVudOHW5s.9rCEwEeGYSyT-F9NgICe%22%3B; _identity=60de36d60d7473186146e3394124c4bcd3bd399a2e3aecbe9a7f216e4b7e60fcs%3A46%3A%22%5B2%2C%22lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y%22%2C2592000%5D%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409654014.7838261,
+  'REQUEST_TIME' => 1409654014,
+)
+2014-09-02 10:34:04 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "real-estate/create".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('real-estate/cre...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "real-estate/create".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 10:34:04 [::1][][-][info][application] $_GET = array (
+  'targetId' => '1',
+)
+
+$_COOKIE = array (
+  'PHPSESSID' => 'u006m1mvh90ovdstfk4bb7m7m1',
+  '_csrf' => '10b5c6cdcc0aa33164042b496b734668b46ece7aa3c57fe2ef55a555a4482ef0s:32:"mWQ98sb-pJs_-xt9ScqRaKzVj8EUzSoP";',
+  '_identity' => '60de36d60d7473186146e3394124c4bcd3bd399a2e3aecbe9a7f216e4b7e60fcs:46:"[2,"lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y",2592000]";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '62976',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/real-estate/create?targetId=1',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/real-estate/create',
+  'PHP_SELF' => '/index.php/real-estate/create',
+  'QUERY_STRING' => 'targetId=1',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/admin.php/real-estate/create',
+  'HTTP_COOKIE' => 'PHPSESSID=u006m1mvh90ovdstfk4bb7m7m1; _csrf=10b5c6cdcc0aa33164042b496b734668b46ece7aa3c57fe2ef55a555a4482ef0s%3A32%3A%22mWQ98sb-pJs_-xt9ScqRaKzVj8EUzSoP%22%3B; _identity=60de36d60d7473186146e3394124c4bcd3bd399a2e3aecbe9a7f216e4b7e60fcs%3A46%3A%22%5B2%2C%22lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y%22%2C2592000%5D%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409654044.0835021,
+  'REQUEST_TIME' => 1409654044,
+)

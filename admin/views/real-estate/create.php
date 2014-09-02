@@ -30,7 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
     }
 
     ?>
-    <?= Html::beginForm('real-estate/create', 'get', ['id' => 'selectTargetForm', 'class' => 'smart-form']) ?>
+    <?= Html::beginForm(['real-estate/create'], 'get', ['id' => 'selectTargetForm', 'class' => 'smart-form']) ?>
     <section>
         <?= Html::dropDownList('targetId', $model->targetId, $targets, ['id' => 'selectTarget']) ?>
     </section>
