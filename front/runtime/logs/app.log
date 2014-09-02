@@ -398,3 +398,87 @@ $_SERVER = array (
   'REQUEST_TIME_FLOAT' => 1409649824.379149,
   'REQUEST_TIME' => 1409649824,
 )
+2014-09-02 10:27:27 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('site/img/demo/i...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 10:27:27 [::1][][-][info][application] $_COOKIE = array (
+  'PHPSESSID' => 'oubj66s8usj437m0g2ftb7nan1',
+  '_csrf' => '0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs:32:"TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '62524',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/site/img/demo/iphoneview.png',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/site/img/demo/iphoneview.png',
+  'PHP_SELF' => '/index.php/site/img/demo/iphoneview.png',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/index.php/site/login',
+  'HTTP_COOKIE' => 'PHPSESSID=oubj66s8usj437m0g2ftb7nan1; _csrf=0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs%3A32%3A%22TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409653647.8258369,
+  'REQUEST_TIME' => 1409653647,
+)
+2014-09-02 10:27:28 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('site/img/demo/i...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 10:27:28 [::1][][-][info][application] $_COOKIE = array (
+  'PHPSESSID' => 'oubj66s8usj437m0g2ftb7nan1',
+  '_csrf' => '0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs:32:"TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '62541',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/site/img/demo/iphoneview.png',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/site/img/demo/iphoneview.png',
+  'PHP_SELF' => '/index.php/site/img/demo/iphoneview.png',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/index.php/site/login',
+  'HTTP_COOKIE' => 'PHPSESSID=oubj66s8usj437m0g2ftb7nan1; _csrf=0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs%3A32%3A%22TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409653648.57688,
+  'REQUEST_TIME' => 1409653648,
+)

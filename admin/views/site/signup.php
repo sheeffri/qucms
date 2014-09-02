@@ -17,10 +17,10 @@ $this->params['breadcrumbs'][] = $this->title;
     </header>
 
     <fieldset>
-        <?= $form->field($model, 'username')->icon('user') ?>
-        <?= $form->field($model, 'email')->icon('envelope') ?>
-        <?= $form->field($model, 'password')->passwordInput()->icon('lock') ?>
-        <?= $form->field($model, 'repeatPassword')->passwordInput()->icon('lock') ?>
+        <?= $form->field($model, 'username') ?>
+        <?= $form->field($model, 'email') ?>
+        <?= $form->field($model, 'password')->passwordInput() ?>
+        <?= $form->field($model, 'repeatPassword')->passwordInput() ?>
     </fieldset>
     <footer>
         <?= Html::submitButton('Зарегестрировать', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>

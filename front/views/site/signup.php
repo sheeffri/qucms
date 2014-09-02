@@ -12,17 +12,17 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <?php $form = ActiveForm::begin(); ?>
-    <header>
-        <?= Html::encode($this->title) ?>
-    </header>
+<header>
+    <?= Html::encode($this->title) ?>
+</header>
 
-    <fieldset>
-        <?= $form->field($model, 'username')->icon('user') ?>
-        <?= $form->field($model, 'email')->icon('envelope') ?>
-        <?= $form->field($model, 'password')->passwordInput()->icon('lock') ?>
-        <?= $form->field($model, 'repeatPassword')->passwordInput()->icon('lock') ?>
-    </fieldset>
-    <footer>
-        <?= Html::submitButton('Зарегестрировать', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
-    </footer>
+<fieldset>
+    <?= $form->field($model, 'username') ?>
+    <?= $form->field($model, 'email') ?>
+    <?= $form->field($model, 'password')->passwordInput() ?>
+    <?= $form->field($model, 'repeatPassword')->passwordInput() ?>
+</fieldset>
+<footer>
+    <?= Html::submitButton('Зарегестрировать', ['class' => 'btn btn-primary', 'name' => 'signup-button']) ?>
+</footer>
 <?php ActiveForm::end(); ?>
