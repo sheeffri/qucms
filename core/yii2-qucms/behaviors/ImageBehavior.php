@@ -4,6 +4,7 @@ namespace siasoft\qucms\behaviors;
 
 use yii\base\Behavior;
 use yii\helpers\Inflector;
+use yii\helpers\VarDumper;
 
 /**
  * Description of Image
@@ -17,12 +18,6 @@ class ImageBehavior extends Behavior {
     private $_name;
 
     private $_imageNames;
-
-    /**
-     * Max count of images, 0 - unlimited
-     * @var int
-     */
-    public $maxCount = 1;
 
     /**
      * list of image sections for generate image
@@ -52,18 +47,21 @@ class ImageBehavior extends Behavior {
 
     protected function getImageNames() {
         if ($this->_imageNames === null) {
-            $name = $this->name;
+            $name = $this->getName();
             $names = [$name];
             foreach($this->sections as $section) {
                 $names[] = $name . Inflector::camelize($section);
             }
+            $this->_imageNames = $names;
         }
         return $this->_imageNames;
     }
 
     public function __get($name)
     {
-
+        if (in_array($name, $this->getImageNames())) {
+            return [];
+        }
         return parent::__get($name);
     }
 
@@ -73,6 +71,7 @@ class ImageBehavior extends Behavior {
             case 'maxCount':
             case 'modelName':
             case 'requiredFields':
+            case 'imageNames':
                 return false;
         }
 

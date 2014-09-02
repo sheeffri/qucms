@@ -8,9 +8,17 @@
 
 namespace siasoft\qucms\widgets;
 
+use siasoft\qucms\web\FileUploadAsset;
 use yii\base\Widget;
+use yii\db\BaseActiveRecord;
+use yii\helpers\Html;
 use yii\helpers\Json;
 use yii\helpers\ArrayHelper;
+use yii\helpers\Url;
+use yii\helpers\VarDumper;
+use yii\web\JsExpression;
+use yii\web\Session;
+use yii\web\View;
 
 /**
  * Description of Image
@@ -19,14 +27,8 @@ use yii\helpers\ArrayHelper;
  */
 class ImageUploader extends Widget
 {
-    /**
-     * @var \siasoft\qucms\behaviors\ImageBehavior
-     */
-    private $_behavior;
-    /**
-     * @var Template
-     */
-    private $_templateItem;
+    public $itemTemplate = '<div class="dz-preview dz-image-preview"><div class="dz-details"><div class="dz-filename"><span data-dz-name="">{fileName}</span></div><img data-dz-thumbnail="" alt="Chrysanthemum.jpg" src="{url}"></div><a class="btn btn-sm btn-danger btn-block" href="{removeUrl}">Удалить файл</a></div>';
+
     /**
      * target model
      * @var \yii\base\Model
@@ -37,74 +39,75 @@ class ImageUploader extends Widget
      * @var string
      */
     public $attribute;
-    /**
-     * class of template item
-     * @var string 
-     */
-    public $templateItemClass = '\siasoft\qucms\widgets\ImageUploaderTeplate';
-    public $options = [];
-    /**
-     * parts of template
-     * @var string[]
-     */
-    public $templateParts = [
-        '{img}' => '<img id="{id}-img" />',
-        '{label}' => '<span class="label label-primary" id={id}-label></span>',
-        '{deleteButton}' => '<button class="btn btn-danger btn-xs" id="{id}-delete"><i class="fa fa-minus"></i></button>'
+
+    public $options = [
+        'multiple' => true
     ];
-    public $clientOptions = [
-        'imageSelector' => '#{id}-img',
-        'labelSelector' => '#{id}-label',
-        'deleteButtonSelector' => '#{id}-delete'
-    ];
+
+    public $clientOptions = [];
 
     public function init()
     {
         parent::init();
-        $this->_behavior = $behavior = $this->model->getBehavior($this->attribute);
+    }
+
+    private function getSessionKey() {
+        $pk = '';
+        if (is_a($this->model, BaseActiveRecord::className())) {
+            $pk = implode('_', array_values($this->model->getPrimaryKey(true)));
+        }
+        return strtr($this->model->className(), ['\\' => '_']) . '_' . $this->id . '_' . ($pk === '' ? 'new' : $pk);
+    }
+
+    private function imagesFromSession($key) {
+        $session = new Session();
+        $session->open();
+        $result = $session->get($key, []);
+        $session->close();
+        return $result;
     }
 
     public function run()
     {
+        $sessionKey = $this->getSessionKey();
+        $jsTemplate = strtr($this->itemTemplate, [
+            '{fileName}' => "'+data.result.name+'",
+            '{url}' => "'+data.result.url+'",
+            '{removeUrl}' => Url::to(['image/remove', 'key' => $sessionKey])
+        ]);
+        $options = array_merge([
+            'dataType' => 'json',
+            'url' => Url::to(['image/upload']),
+            'dropZone' => "#$this->id-container",
+            'formData' => [
+                'key' => $sessionKey,
+                'parameterName' => $this->id
+            ],
+            'done' => new JsExpression("function(e, data){jQuery('$jsTemplate').appendTo('#$this->id-container');}"),
+            'dragover' => new JsExpression("function(e){jQuery('#$this->id-container').addClass('dz-drag-hover');}"),
+            'drop' => new JsExpression("function(e){jQuery('#$this->id-container').removeClass('dz-drag-hover');}")
+        ], $this->clientOptions);
         $this->options['id'] = $this->id;
-        //echo $this->render('image-uploader', [
-            //'maxCount' => $this->_behavior->maxCount,
-            //'options' => $this->options
-        //]);
-        //$this->registerScript();
-    }
-
-    public function beginTemplate(array $options = [])
-    {
-        $templateItemClass = $this->templateItemClass;
-        $imageUploaderTemplateClass = '\siasoft\qucms\widgets\ImageUploaderTeplate';
-        if ($templateItemClass === $imageUploaderTemplateClass || is_subclass_of($templateItemClass, $imageUploaderTemplateClass)) {
-            $options = ArrayHelper::merge($options, [
-                        'model' => \Yii::createObject([
-                            'class' => $this->_behavior->dataClass,
-                            'requiredFields' => $this->_behavior->requiredFields
-            ])]);
+        Html::addCssClass($this->options, 'hidden');
+        echo Html::beginTag('div', ['id' => $this->id . '-container', 'class' => 'dropzone dz-clickable']);
+        echo Html::tag('div', '', ['class' => 'dz-default dz-message']);
+        $images = array_merge($this->model->{$this->attribute}, $this->imagesFromSession($sessionKey));
+        foreach ($images as $image) {
+            echo strtr($this->itemTemplate, [
+                '{fileName}' => $image->name,
+                '{url}' => $image->url,
+                '{removeUrl}' => Url::to(['image/remove', 'key' => $sessionKey, 'file' => $image->name])
+                ]
+            );
         }
-        return $this->_templateItem = $templateItemClass::begin($options);
-    }
+        echo Html::endTag('div');
 
-    public function endTemplate()
-    {
-        $templateItemClass = $this->templateItemClass;
-        $templateItemClass::end();
+        $this->view->on(View::EVENT_END_BODY, function() { echo Html::fileInput($this->id, null, $this->options); });
+        FileUploadAsset::register($this->view);
+        $options = Json::encode($options);
+        $this->view->registerJs("jQuery('#{$this->id}-container').click(function(eventData){ if (jQuery(eventData.target).hasClass('dz-clickable')) { jQuery('#{$this->id}').click(); }});");
+        $this->view->registerJs("jQuery('#$this->id').fileupload($options);");
+        $this->view->registerJs("jQuery('#{$this->id}-container').on('dragleave', function(e){jQuery('#$this->id-container').removeClass('dz-drag-hover');});");
+        $this->view->registerJs("jQuery('#{$this->id} a').click(function(){alert('');})");
     }
-
-    protected function registerScript()
-    {
-        $replaceIds = function($a) {
-            return str_replace('{id}', $this->id, $a);
-        };
-        $options = Json::encode(array_merge([
-                    'sections' => $this->_behavior->sections,
-                    'template' => strtr($this->_templateItem, array_map($replaceIds, $this->templateParts)),
-                    'templateOptions' => $this->_templateItem
-                                ], array_map($replaceIds, $this->clientOptions)));
-        $this->view->registerJs("jQuery('#{$this->id}').imageUploader($options);");
-    }
-
 }

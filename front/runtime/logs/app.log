@@ -1,0 +1,177 @@
+2014-09-02 09:07:38 [::1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 09:07:38 [::1][-][-][info][application] $_COOKIE = array (
+  '__utma' => '111872281.1718036844.1403172317.1405595061.1406029488.9',
+  '__utmz' => '111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)',
+  '_identity' => 'cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds:46:"[2,"lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y",2592000]";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '59275',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/',
+  'PHP_SELF' => '/index.php/',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_COOKIE' => '__utma=111872281.1718036844.1403172317.1405595061.1406029488.9; __utmz=111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity=cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds%3A46%3A%22%5B2%2C%22lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y%22%2C2592000%5D%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409648858.4489,
+  'REQUEST_TIME' => 1409648858,
+)
+2014-09-02 09:12:05 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "real-estate/index".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('real-estate/ind...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "real-estate/index".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 09:12:05 [::1][][-][info][application] $_COOKIE = array (
+  '__utma' => '111872281.1718036844.1403172317.1405595061.1406029488.9',
+  '__utmz' => '111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)',
+  '_identity' => 'cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds:46:"[2,"lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y",2592000]";',
+  '_csrf' => '6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s:32:"OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-";',
+  'PHPSESSID' => '159gi9djbt10ldvgrnch91u285',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '59422',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/real-estate/index',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/real-estate/index',
+  'PHP_SELF' => '/index.php/real-estate/index',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/',
+  'HTTP_COOKIE' => '__utma=111872281.1718036844.1403172317.1405595061.1406029488.9; __utmz=111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity=cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds%3A46%3A%22%5B2%2C%22lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y%22%2C2592000%5D%22%3B; _csrf=6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s%3A32%3A%22OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-%22%3B; PHPSESSID=159gi9djbt10ldvgrnch91u285',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409649125.075151,
+  'REQUEST_TIME' => 1409649125,
+)
+2014-09-02 09:12:05 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "real-estate/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('real-estate/img...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "real-estate/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 09:12:05 [::1][][-][info][application] $_COOKIE = array (
+  '__utma' => '111872281.1718036844.1403172317.1405595061.1406029488.9',
+  '__utmz' => '111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)',
+  '_identity' => 'cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds:46:"[2,"lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y",2592000]";',
+  '_csrf' => '6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s:32:"OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-";',
+  'PHPSESSID' => '159gi9djbt10ldvgrnch91u285',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '59444',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/real-estate/img/demo/iphoneview.png',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/real-estate/img/demo/iphoneview.png',
+  'PHP_SELF' => '/index.php/real-estate/img/demo/iphoneview.png',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/index.php/real-estate/index',
+  'HTTP_COOKIE' => '__utma=111872281.1718036844.1403172317.1405595061.1406029488.9; __utmz=111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity=cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds%3A46%3A%22%5B2%2C%22lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y%22%2C2592000%5D%22%3B; _csrf=6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s%3A32%3A%22OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-%22%3B; PHPSESSID=159gi9djbt10ldvgrnch91u285',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409649125.399169,
+  'REQUEST_TIME' => 1409649125,
+)
+2014-09-02 09:12:05 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "real-estate/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('real-estate/img...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "real-estate/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 09:12:05 [::1][][-][info][application] $_COOKIE = array (
+  '__utma' => '111872281.1718036844.1403172317.1405595061.1406029488.9',
+  '__utmz' => '111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)',
+  '_identity' => 'cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds:46:"[2,"lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y",2592000]";',
+  '_csrf' => '6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s:32:"OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-";',
+  'PHPSESSID' => '159gi9djbt10ldvgrnch91u285',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '59447',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/real-estate/img/demo/iphoneview.png',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/real-estate/img/demo/iphoneview.png',
+  'PHP_SELF' => '/index.php/real-estate/img/demo/iphoneview.png',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/index.php/real-estate/index',
+  'HTTP_COOKIE' => '__utma=111872281.1718036844.1403172317.1405595061.1406029488.9; __utmz=111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity=cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds%3A46%3A%22%5B2%2C%22lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y%22%2C2592000%5D%22%3B; _csrf=6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s%3A32%3A%22OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-%22%3B; PHPSESSID=159gi9djbt10ldvgrnch91u285',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409649125.9271989,
+  'REQUEST_TIME' => 1409649125,
+)

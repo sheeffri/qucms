@@ -94,8 +94,7 @@ class RealEstate extends \yii\db\ActiveRecord
     {
         return [
             'images' => [
-                'class' => ImageBehavior::className(),
-                'maxCount' => '0'
+                'class' => ImageBehavior::className()
             ]
         ];
     }
