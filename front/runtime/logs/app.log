@@ -175,3 +175,226 @@ $_SERVER = array (
   'REQUEST_TIME_FLOAT' => 1409649125.9271989,
   'REQUEST_TIME' => 1409649125,
 )
+2014-09-02 09:21:29 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "logout".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('logout', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "logout".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 09:21:29 [::1][][-][info][application] $_COOKIE = array (
+  '__utma' => '111872281.1718036844.1403172317.1405595061.1406029488.9',
+  '__utmz' => '111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)',
+  '_identity' => 'cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds:46:"[2,"lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y",2592000]";',
+  '_csrf' => '6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s:32:"OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-";',
+  'PHPSESSID' => '159gi9djbt10ldvgrnch91u285',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '60825',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/logout',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/logout',
+  'PHP_SELF' => '/index.php/logout',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_COOKIE' => '__utma=111872281.1718036844.1403172317.1405595061.1406029488.9; __utmz=111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _identity=cfb77aa599396f940ea79d8405af8b225f920febd71a5047b512a0a42a279f1ds%3A46%3A%22%5B2%2C%22lSCv7wvlD_c.XV96F7L5-41Q6KdIkD7Y%22%2C2592000%5D%22%3B; _csrf=6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s%3A32%3A%22OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-%22%3B; PHPSESSID=159gi9djbt10ldvgrnch91u285',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409649689.4144289,
+  'REQUEST_TIME' => 1409649689,
+)
+2014-09-02 09:22:47 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "login".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('login', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "login".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 09:22:47 [::1][][-][info][application] $_COOKIE = array (
+  '__utma' => '111872281.1718036844.1403172317.1405595061.1406029488.9',
+  '__utmz' => '111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none)',
+  '_csrf' => '6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s:32:"OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-";',
+  'PHPSESSID' => '159gi9djbt10ldvgrnch91u285',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '60959',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/login',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/login',
+  'PHP_SELF' => '/index.php/login',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_COOKIE' => '__utma=111872281.1718036844.1403172317.1405595061.1406029488.9; __utmz=111872281.1403172317.1.1.utmcsr=(direct)|utmccn=(direct)|utmcmd=(none); _csrf=6c4e2ed18626fbcc5e8d5fb4d5a1d4050e26cc0ee5b47b2b736f7da045dc4ce4s%3A32%3A%22OrLdsgMXHMDbtREQm9tfIVnKIkZpBSW-%22%3B; PHPSESSID=159gi9djbt10ldvgrnch91u285',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409649767.3858891,
+  'REQUEST_TIME' => 1409649767,
+)
+2014-09-02 09:23:15 [::1][][oubj66s8usj437m0g2ftb7nan1][error][yii\base\UnknownMethodException] exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: siasoft\qucms\widgets\ActiveField::icon()' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Component.php:285
+Stack trace:
+#0 C:\www\qucms.loc\front\views\site\login.php(18): yii\base\Component->__call('icon', Array)
+#1 C:\www\qucms.loc\front\views\site\login.php(18): siasoft\qucms\widgets\ActiveField->icon('left', 'user')
+#2 C:\www\qucms.loc\vendor\yiisoft\yii2\base\View.php(313): require('C:\\www\\qucms.lo...')
+#3 C:\www\qucms.loc\vendor\yiisoft\yii2\base\View.php(245): yii\base\View->renderPhpFile('C:\\www\\qucms.lo...', Array)
+#4 C:\www\qucms.loc\vendor\yiisoft\yii2\base\View.php(147): yii\base\View->renderFile('C:\\www\\qucms.lo...', Array, Object(front\controllers\SiteController))
+#5 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Controller.php(362): yii\base\View->render('login', Array, Object(front\controllers\SiteController))
+#6 C:\www\qucms.loc\front\controllers\SiteController.php(80): yii\base\Controller->render('login', Array)
+#7 [internal function]: front\controllers\SiteController->actionLogin()
+#8 C:\www\qucms.loc\vendor\yiisoft\yii2\base\InlineAction.php(54): call_user_func_array(Array, Array)
+#9 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Controller.php(147): yii\base\InlineAction->runWithParams(Array)
+#10 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php(423): yii\base\Controller->runAction('login', Array)
+#11 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('site/login', Array)
+#12 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#14 {main}
+2014-09-02 09:23:15 [::1][][oubj66s8usj437m0g2ftb7nan1][info][application] $_COOKIE = array (
+  'PHPSESSID' => 'oubj66s8usj437m0g2ftb7nan1',
+)
+
+$_SESSION = array (
+  '__flash' => 
+  array (
+  ),
+  '__returnUrl' => '/index.php',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '61041',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/site/login',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/site/login',
+  'PHP_SELF' => '/index.php/site/login',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_COOKIE' => 'PHPSESSID=oubj66s8usj437m0g2ftb7nan1',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409649795.244482,
+  'REQUEST_TIME' => 1409649795,
+)
+2014-09-02 09:23:43 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('site/img/demo/i...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 09:23:43 [::1][][-][info][application] $_COOKIE = array (
+  'PHPSESSID' => 'oubj66s8usj437m0g2ftb7nan1',
+  '_csrf' => '0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs:32:"TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '61073',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/site/img/demo/iphoneview.png',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/site/img/demo/iphoneview.png',
+  'PHP_SELF' => '/index.php/site/img/demo/iphoneview.png',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/index.php/site/login',
+  'HTTP_COOKIE' => 'PHPSESSID=oubj66s8usj437m0g2ftb7nan1; _csrf=0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs%3A32%3A%22TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409649823.71311,
+  'REQUEST_TIME' => 1409649823,
+)
+2014-09-02 09:23:44 [::1][][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\base\Module.php:429
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php(82): yii\base\Module->runAction('site/img/demo/i...', Array)
+#1 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Unable to resolve the request "site/img/demo/iphoneview.png".' in C:\www\qucms.loc\vendor\yiisoft\yii2\web\Application.php:94
+Stack trace:
+#0 C:\www\qucms.loc\vendor\yiisoft\yii2\base\Application.php(353): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\www\qucms.loc\public_html\index.php(27): yii\base\Application->run()
+#2 {main}
+2014-09-02 09:23:44 [::1][][-][info][application] $_COOKIE = array (
+  'PHPSESSID' => 'oubj66s8usj437m0g2ftb7nan1',
+  '_csrf' => '0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs:32:"TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu";',
+)
+
+$_SERVER = array (
+  'DOCUMENT_ROOT' => 'C:\\www\\qucms.loc\\public_html',
+  'REMOTE_ADDR' => '::1',
+  'REMOTE_PORT' => '61075',
+  'SERVER_SOFTWARE' => 'PHP 5.4.29 Development Server',
+  'SERVER_PROTOCOL' => 'HTTP/1.1',
+  'SERVER_NAME' => 'localhost',
+  'SERVER_PORT' => '8003',
+  'REQUEST_URI' => '/index.php/site/img/demo/iphoneview.png',
+  'REQUEST_METHOD' => 'GET',
+  'SCRIPT_NAME' => '/index.php',
+  'SCRIPT_FILENAME' => 'C:\\www\\qucms.loc\\public_html\\index.php',
+  'PATH_INFO' => '/site/img/demo/iphoneview.png',
+  'PHP_SELF' => '/index.php/site/img/demo/iphoneview.png',
+  'HTTP_HOST' => 'localhost:8003',
+  'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:31.0) Gecko/20100101 Firefox/31.0',
+  'HTTP_ACCEPT' => 'image/png,image/*;q=0.8,*/*;q=0.5',
+  'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3',
+  'HTTP_ACCEPT_ENCODING' => 'gzip, deflate',
+  'HTTP_REFERER' => 'http://localhost:8003/index.php/site/login',
+  'HTTP_COOKIE' => 'PHPSESSID=oubj66s8usj437m0g2ftb7nan1; _csrf=0d123a241096e5b11b7d27daf3165a6b7ef737aa16c219b791ba812bd08f542fs%3A32%3A%22TOyKbnINmDQuiWp-iMUFwxCmmZmHCqmu%22%3B',
+  'HTTP_CONNECTION' => 'keep-alive',
+  'REQUEST_TIME_FLOAT' => 1409649824.379149,
+  'REQUEST_TIME' => 1409649824,
+)

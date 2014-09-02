@@ -15,8 +15,8 @@ $this->params['breadcrumbs'][] = $this->title;
     <?php $form = ActiveForm::begin(); ?>
     <fieldset>
         <legend><?= Html::encode($this->title) ?></legend>
-        <?= $form->field($model, 'username')->icon('left', 'user') ?>
-        <?= $form->field($model, 'password')->passwordInput()->icon('left', 'lock') ?>
+        <?= $form->field($model, 'username') ?>
+        <?= $form->field($model, 'password')->passwordInput() ?>
         <?= $form->field($model, 'rememberMe')->checkbox() ?>
         <?= Html::submitButton('Войти', ['class' => 'btn btn-primary pull-right', 'name' => 'login-button']) ?>
         <?= Html::a('Сбросить пароль', ['site/request-password-reset']) ?>
