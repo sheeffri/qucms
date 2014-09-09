@@ -5,7 +5,7 @@ use yii\helpers\Html;
 <header id="header">
     <div id="logo-group">                
         <span id="logo"> <?= Html::img('/img/logo.png') ?> </span>
-        <span class="activity-dropdown" id="activity"> <i class="fa fa-user"></i> <b class="badge bg-color-red bounceIn animated"> 21 </b> </span>
+        <span class="activity-dropdown" id="activity"> <i class="fa fa-user"></i> <b class="badge bg-color-green bounceIn animated"> 21 </b> </span>
         <div class="ajax-dropdown">
 
             <!-- the ID links are fetched via AJAX to the ajax container "ajax-notifications" -->

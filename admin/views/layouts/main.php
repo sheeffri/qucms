@@ -21,7 +21,7 @@ $this->beginPage();
         <title><?= Html::encode($this->title) ?></title>
         <?php $this->head() ?>
     </head>
-    <body class="fixed-header">
+    <body class="fixed-header smart-style-1">
         <?php $this->beginBody() ?>
         <?= $this->render('header'); ?>
         <?= $this->render('nav'); ?>

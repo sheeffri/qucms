@@ -8,3 +8,19 @@ and open the template in the editor.
     Author     : SW-PC1
 */
 
+.smart-form .btn {
+    padding: 6px 12px;
+}
+
+.smart-style-1 .btn-header > *:first-child > a {
+    background: none repeat scroll 0 0 #60bb44;
+    border: 1px solid #60bb44;
+    color: #fff !important;
+    cursor: pointer !important;
+}
+.bg-color-green {
+    background-color: #60bb44 !important;
+}
+.checkbox label {
+    padding-left: 0;
+}

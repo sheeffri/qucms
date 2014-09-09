@@ -18,7 +18,7 @@ use yii\helpers\Html;
         </span>
     </div>
 
-    <nav>
+    <nav id="sidebar-menu">
         <?php
         function setLabel(&$items, $root = true) {
             foreach($items as &$item) {

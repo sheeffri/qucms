@@ -9,7 +9,7 @@ use yii\grid\GridView;
  * @var admin\models\search\RealEstate $searchModel
  */
 
-$this->title = 'Real Estates';
+$this->title = 'Вся недвижимость';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="real-estate-index">

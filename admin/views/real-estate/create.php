@@ -7,9 +7,8 @@ use yii\helpers\Html;
  * @var common\models\RealEstate $model
  * @var \common\models\Addres $addressModel
  */
-
-$this->title = 'Create Real Estate';
-$this->params['breadcrumbs'][] = ['label' => 'Real Estates', 'url' => ['index']];
+$this->title = 'Новый объект';
+$this->params['breadcrumbs'][] = ['label' => 'Вся недвижимость', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
@@ -24,11 +23,9 @@ $this->params['breadcrumbs'][] = $this->title;
 
 <div class="well">
     <?php
-
     if ($model->targetId === null) {
         $targets = ['' => 'Выбирете тип'] + $targets;
     }
-
     ?>
     <?= Html::beginForm(['real-estate/create'], 'get', ['id' => 'selectTargetForm', 'class' => 'smart-form']) ?>
     <section>
@@ -37,22 +34,25 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= Html::endForm() ?>
 </div>
 
+
 <section id="widget-grid">
     <div class="row">
         <article class="col-xs-12 sortable-grid ui-sortable">
-            <div id="wid-id-0" class="jarviswidget jarviswidget-sortable">
+            <div id="wid-id-0" class="jarviswidget jarviswidget-sortable"  data-widget-editbutton="false" data-widget-colorbutton="false" >
                 <header>
-                    <h2>Недвижимость</h2>
+                    <span class="widget-icon"> <i class="fa fa-building"></i> </span>
+                    <h2>Карточка объекта недвижимости</h2>
                 </header>
                 <div>
-
-                    <?=
-                    $this->render('_form', [
-                        'model' => $model,
-                        'addressModel' => $addressModel,
-                        'targets' => $targets
-                    ]) ?>
-
+                    <div class="widget-body no-padding">
+                        <?=
+                        $this->render('_form', [
+                            'model' => $model,
+                            'addressModel' => $addressModel,
+                            'targets' => $targets
+                        ])
+                        ?>                        
+                    </div>
                 </div>
             </div>
         </article>
